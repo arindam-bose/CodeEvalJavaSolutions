@@ -6,8 +6,10 @@ Solution List
 #### Easy Problems
 
 > - File Size
+> - Fizz Buzz
 > - One Zero Two Zero
 > - Read More
+> - Sum of Digits
 > - Swap Case
 > - Swap Elements
 > - Swap Numbers
@@ -20,6 +22,6 @@ Solution List
 
 #### Hard Problems
 
-> - 
+> - String Permutations
 
 
