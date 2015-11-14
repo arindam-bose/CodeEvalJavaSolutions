@@ -26,6 +26,7 @@ import java.io.IOException;
 
 public class RemoveCharacters {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_RemoveCharacters.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));

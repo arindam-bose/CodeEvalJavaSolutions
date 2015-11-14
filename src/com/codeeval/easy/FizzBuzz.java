@@ -41,6 +41,7 @@ import java.io.IOException;
 
 public class FizzBuzz {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_FizzBuzz.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));

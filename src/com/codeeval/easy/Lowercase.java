@@ -24,6 +24,7 @@ import java.io.IOException;
 
 public class Lowercase {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_Lowercase.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));

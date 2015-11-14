@@ -24,6 +24,7 @@ import java.io.IOException;
 
 public class SwapCase {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SwapCase.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));
