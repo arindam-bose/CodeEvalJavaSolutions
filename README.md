@@ -7,12 +7,16 @@ Solution List
 
 > - Big Digits
 > - Bit Positions
+> - Chardonnay or Cabernet
+> - Compare Points
 > - File Size
 > - Fizz Buzz
 > - Lowercase
+> - Odd Numbers
 > - One Zero Two Zero
 > - Read More
 > - Sum of Digits
+> - Sum of Integers from File
 > - Sum of Primes
 > - Swap Case
 > - Swap Elements
