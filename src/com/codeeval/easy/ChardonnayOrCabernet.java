@@ -42,7 +42,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ChardonnayOrCabernet {
+public class ChardonnayorCabernet {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
