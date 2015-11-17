@@ -7,13 +7,20 @@ Solution List
 
 > - [Big Digits](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/BigDigits.java)
 > - [Bit Positions](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/BitPositions.java)
-> - [Chardonnay or Cabernet](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ChardonnayOrCabernet.java)
+> - [Capitalize Words]
+(https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/CapitalizeWords.java)
+> - [Chardonnay or Cabernet](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ChardonnayorCabernet.java)
 > - [Compare Points](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ComparePoints.java)
 > - [File Size](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/FileSize.java)
 > - [Fizz Buzz](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/FizzBuzz.java)
 > - [Lowercase](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/Lowercase.java)
+> - [Matrix Rotation] (https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MatrixRotation.java)
+> - [Nice Angles]
+(https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/NiceAngles.java)
 > - [Odd Numbers](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/OddNumbers.java)
 > - [One Zero Two Zero](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/OneZeroTwoZero.java)
+> - [Query Board]
+(https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/QueryBoard.java)
 > - [Read More](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ReadMore.java)
 > - [Sum of Digits](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SumofDigits.java)
 > - [Sum of Integers from File](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SumofIntegersfromFile.java)
