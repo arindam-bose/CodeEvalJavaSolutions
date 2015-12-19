@@ -1,6 +1,6 @@
 /**
- * UniqueElements
- * ---------------
+ * Unique Elements
+ * ----------------
  * CHALLENGE DESCRIPTION:
  * You are given a sorted list of numbers with duplicates. Print out the sorted list with duplicates removed.
  * 
