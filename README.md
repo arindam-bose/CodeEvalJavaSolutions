@@ -19,13 +19,19 @@ Solution List
 1. [Matrix Rotation](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MatrixRotation.java)
 1. [Max Range Sum](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MaxRangeSum.java)
 1. [Minimum Distance](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MinimumDistance.java)
+1. [Multiples of a Number](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MultiplesofaNumber.java)
+1. [Multiplication Tables](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/MultiplicationTables.java)
 1. [Nice Angles](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/NiceAngles.java)
 1. [N Mod M](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/NModM.java)
 1. [Odd Numbers](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/OddNumbers.java)
 1. [One Zero Two Zero](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/OneZeroTwoZero.java)
+1. [Prime Palindrome](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/PrimePalindrome.java)
 1. [Query Board](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/QueryBoard.java)
 1. [Racing Chars](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/RacingChars.java)
 1. [Read More](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ReadMore.java)
+1. [Reverse Words](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/ReverseWords.java)
+1. [Rightmost Char](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/RightmostChar.java)
+1. [Set Intersection](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SetIntersection.java)
 1. [Split the Number](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SplittheNumber.java)
 1. [Sum of Digits](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SumofDigits.java)
 1. [Sum of Integers from File](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SumofIntegersfromFile.java)
@@ -33,6 +39,7 @@ Solution List
 1. [Swap Case](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SwapCase.java)
 1. [Swap Elements](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SwapElements.java)
 1. [Swap Numbers](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/SwapNumbers.java)
+1. [Unique Elements](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/easy/UniqueElements.java)
 
 #### Moderate Problems
 
