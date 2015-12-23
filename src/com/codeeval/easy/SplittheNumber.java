@@ -1,6 +1,8 @@
 /**
  * Split the Number
  * -----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a number N and a pattern. The pattern consists of lowercase latin letters and one operation "+" or "-". 
  * The challenge is to split the number and evaluate it according to this pattern e.g. 
@@ -37,23 +39,23 @@ public class SplittheNumber {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SplittheNumber.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] words = line.split(" ");
-            long result = 0;
-            if (words[1].contains("+")) {
-            	String[] splitted = words[1].split("\\+");
-            	result = Long.parseLong(words[0].substring(0, splitted[0].length())) 
-            			+ Long.parseLong(words[0].substring(splitted[0].length()));
-            } else if (words[1].contains("-")) {
-            	String[] splitted = words[1].split("-");
-            	result = Long.parseLong(words[0].substring(0, splitted[0].length())) 
-            			- Long.parseLong(words[0].substring(splitted[0].length()));
-            }
-            System.out.println(result);
-        }
+		File file = new File("files/easy/test_SplittheNumber.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] words = line.split(" ");
+			long result = 0;
+			if (words[1].contains("+")) {
+				String[] splitted = words[1].split("\\+");
+				result = Long.parseLong(words[0].substring(0, splitted[0].length()))
+						+ Long.parseLong(words[0].substring(splitted[0].length()));
+			} else if (words[1].contains("-")) {
+				String[] splitted = words[1].split("-");
+				result = Long.parseLong(words[0].substring(0, splitted[0].length()))
+						- Long.parseLong(words[0].substring(splitted[0].length()));
+			}
+			System.out.println(result);
+		}
 	}
 }

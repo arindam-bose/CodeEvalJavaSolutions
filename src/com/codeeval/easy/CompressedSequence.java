@@ -1,6 +1,8 @@
 /**
  * Compressed Sequence
  * ---------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Assume that someone dictates you a sequence of numbers, and you need to write it down. For brevity, he dictates 
  * it as follows: first he dictates the number of consecutive identical numbers, and then - the number itself.
@@ -46,26 +48,26 @@ public class CompressedSequence {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_CompressedSequence.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] nums = line.split(" ");
-            StringBuffer numBuffer = new StringBuffer();
-            String current = nums[0];
-            int count = 1;
-            for (int i = 1; i < nums.length; i++) {
-            	if (current.equals(nums[i])) {
-            		count++;
-            	} else {
-            		numBuffer.append(count).append(" ").append(current).append(" ");
-            		count = 1;
-            		current = nums[i];
-            	}
-            }
-            numBuffer.append(count).append(" ").append(current);
-            System.out.println(numBuffer);
-        }
+		File file = new File("files/easy/test_CompressedSequence.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] nums = line.split(" ");
+			StringBuffer numBuffer = new StringBuffer();
+			String current = nums[0];
+			int count = 1;
+			for (int i = 1; i < nums.length; i++) {
+				if (current.equals(nums[i])) {
+					count++;
+				} else {
+					numBuffer.append(count).append(" ").append(current).append(" ");
+					count = 1;
+					current = nums[i];
+				}
+			}
+			numBuffer.append(count).append(" ").append(current);
+			System.out.println(numBuffer);
+		}
 	}
 }

@@ -1,6 +1,8 @@
 /**
  * Bit Positions
  * --------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Given a number n and two integers p1,p2 determine if the bits in position p1 and p2 are the same or not.
  * Positions p1 and p2 are 1 based.
@@ -27,18 +29,18 @@ public class BitPositions {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_BitPositions.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numStrings = line.split(",");
-            String bit = Integer.toBinaryString(Integer.parseInt(numStrings[0]));
-            if (bit.charAt(bit.length() - Integer.parseInt(numStrings[1])) == 
-            		bit.charAt(bit.length() - Integer.parseInt(numStrings[2])))
-            	System.out.println("true");
-            else 
-            	System.out.println("false");
-        }
+		File file = new File("files/easy/test_BitPositions.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numStrings = line.split(",");
+			String bit = Integer.toBinaryString(Integer.parseInt(numStrings[0]));
+			if (bit.charAt(bit.length() - Integer.parseInt(numStrings[1])) == bit
+					.charAt(bit.length() - Integer.parseInt(numStrings[2])))
+				System.out.println("true");
+			else
+				System.out.println("false");
+		}
 	}
 }

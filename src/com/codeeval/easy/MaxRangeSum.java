@@ -1,6 +1,8 @@
 /**
  * Max Range Sum
  * ---------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Bob is developing a new strategy to get rich in the stock market. He wishes to invest his portfolio 
  * for 1 or more days, then sell it at the right time to maximize his earnings. Bob has painstakingly 
@@ -43,24 +45,24 @@ public class MaxRangeSum {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_MaxRangeSum.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] parts = line.split(";");
-            int range = Integer.parseInt(parts[0]);
-            String[] nums = parts[1].split(" ");
-            int maxSum = 0;
-            for (int i = 0; i < nums.length - range + 1; i++) {
-            	int sum = 0;
-            	for (int j = 1; j <= range; j++) {
-            		sum += Integer.parseInt(nums[i+j-1]);
-            	}
-            	if (sum >= maxSum) 
-            		maxSum = sum;
-            }
-            System.out.println(maxSum);
-        }
+		File file = new File("files/easy/test_MaxRangeSum.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] parts = line.split(";");
+			int range = Integer.parseInt(parts[0]);
+			String[] nums = parts[1].split(" ");
+			int maxSum = 0;
+			for (int i = 0; i < nums.length - range + 1; i++) {
+				int sum = 0;
+				for (int j = 1; j <= range; j++) {
+					sum += Integer.parseInt(nums[i + j - 1]);
+				}
+				if (sum >= maxSum)
+					maxSum = sum;
+			}
+			System.out.println(maxSum);
+		}
 	}
 }

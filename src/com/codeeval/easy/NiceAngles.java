@@ -1,6 +1,8 @@
 /**
  * Nice Angles
- * -----------
+ * ------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program that outputs the value of angle, reducing its fractional part to minutes and seconds.
  * 
@@ -34,17 +36,17 @@ public class NiceAngles {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_NiceAngles.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            double dd = Double.parseDouble(line);
-            int d = (int) dd;
-            int m = (int) ((dd - d) * 60);
-            int s = (int) ((dd - d - m/60.0) * 3600);
-            System.out.println(d + "." + ((m < 10)? "0" + m : m) + "'" + ((s < 10)? "0" + s : s) + "\"");
-        }
+		File file = new File("files/easy/test_NiceAngles.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			double dd = Double.parseDouble(line);
+			int d = (int) dd;
+			int m = (int) ((dd - d) * 60);
+			int s = (int) ((dd - d - m / 60.0) * 3600);
+			System.out.println(d + "." + ((m < 10) ? "0" + m : m) + "'" + ((s < 10) ? "0" + s : s) + "\"");
+		}
 	}
 
 }

@@ -1,6 +1,8 @@
 /**
  * Compare Points
  * ----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Bob's hiking club is lost in the mountains on the way to a scenic overlook. Fortunately, Bob has a GPS device, 
  * so that he can see the coordinates where the group is currently at. The GPS gives the current X/Y coordinates 
@@ -39,35 +41,35 @@ public class ComparePoints {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_ComparePoints.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] coords = line.trim().split(" ");
-            int hereX = Integer.parseInt(coords[0]);
-            int hereY = Integer.parseInt(coords[1]);
-            int destX = Integer.parseInt(coords[2]);
-            int destY = Integer.parseInt(coords[3]);
-            
-            if (hereX == destX && hereY == destY)
-            	System.out.println("here");
-            else if (hereX == destX && hereY < destY)
-            	System.out.println("N");
-            else if (hereX == destX && hereY > destY)
-            	System.out.println("S");
-            else if (hereX < destX && hereY == destY)
-            	System.out.println("E");
-            else if (hereX > destX && hereY == destY)
-            	System.out.println("W");
-            else if (hereX < destX && hereY < destY)
-            	System.out.println("NE");
-            else if (hereX > destX && hereY < destY)
-            	System.out.println("NW");
-            else if (hereX > destX && hereY > destY)
-            	System.out.println("SW");
-            else if (hereX < destX && hereY > destY)
-            	System.out.println("SE");
-        }
+		File file = new File("files/easy/test_ComparePoints.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] coords = line.trim().split(" ");
+			int hereX = Integer.parseInt(coords[0]);
+			int hereY = Integer.parseInt(coords[1]);
+			int destX = Integer.parseInt(coords[2]);
+			int destY = Integer.parseInt(coords[3]);
+
+			if (hereX == destX && hereY == destY)
+				System.out.println("here");
+			else if (hereX == destX && hereY < destY)
+				System.out.println("N");
+			else if (hereX == destX && hereY > destY)
+				System.out.println("S");
+			else if (hereX < destX && hereY == destY)
+				System.out.println("E");
+			else if (hereX > destX && hereY == destY)
+				System.out.println("W");
+			else if (hereX < destX && hereY < destY)
+				System.out.println("NE");
+			else if (hereX > destX && hereY < destY)
+				System.out.println("NW");
+			else if (hereX > destX && hereY > destY)
+				System.out.println("SW");
+			else if (hereX < destX && hereY > destY)
+				System.out.println("SE");
+		}
 	}
 }

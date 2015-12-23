@@ -1,6 +1,8 @@
 /** 
  * Remove Characters
  * ------------------
+ * @author adambose1990
+ * 
  * Write a program which removes specific characters from a string.
  * 
  * INPUT SAMPLE:
@@ -28,16 +30,16 @@ public class RemoveCharacters {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_RemoveCharacters.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] words = line.split(",");
-            for (int i = 0; i < words[1].trim().length(); i++) {
-            	words[0] = words[0].replaceAll(Character.toString(words[1].trim().charAt(i)), "");
-            }
-            System.out.println(words[0]);
-        }
+		File file = new File("files/moderate/test_RemoveCharacters.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] words = line.split(",");
+			for (int i = 0; i < words[1].trim().length(); i++) {
+				words[0] = words[0].replaceAll(Character.toString(words[1].trim().charAt(i)), "");
+			}
+			System.out.println(words[0]);
+		}
 	}
 }

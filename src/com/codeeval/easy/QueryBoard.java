@@ -1,6 +1,8 @@
 /**
  * Query Board
  * ------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * There is a board (matrix). Every cell of the board contains one integer, which is 0 initially. 
  * The next operations can be applied to the Query Board: 
@@ -46,34 +48,34 @@ public class QueryBoard {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_QueryBoard.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        int[][] board = new int[256][256];
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] commands = line.split(" ");
-            if ("SetCol".equals(commands[0])){
-            	for (int i = 0 ; i < 256; i++) {
-            		board[i][Integer.parseInt(commands[1])] = Integer.parseInt(commands[2]);
-            	}
-            } else if ("SetRow".equals(commands[0])) {
-            	for (int i = 0 ; i < 256; i++) {
-            		board[Integer.parseInt(commands[1])][i] = Integer.parseInt(commands[2]);
-            	}
-            } else if ("QueryCol".equals(commands[0])) {
-            	int sumCol = 0;
-            	for (int i = 0 ; i < 256; i++) {
-            		sumCol += board[i][Integer.parseInt(commands[1])];
-            	}
-            	System.out.println(sumCol);
-            } else if ("QueryRow".equals(commands[0])) {
-            	int sumRow = 0;
-            	for (int i = 0 ; i < 256; i++) {
-            		sumRow += board[Integer.parseInt(commands[1])][i];
-            	}
-            	System.out.println(sumRow);
-            }
-        }
+		File file = new File("files/easy/test_QueryBoard.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		int[][] board = new int[256][256];
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] commands = line.split(" ");
+			if ("SetCol".equals(commands[0])) {
+				for (int i = 0; i < 256; i++) {
+					board[i][Integer.parseInt(commands[1])] = Integer.parseInt(commands[2]);
+				}
+			} else if ("SetRow".equals(commands[0])) {
+				for (int i = 0; i < 256; i++) {
+					board[Integer.parseInt(commands[1])][i] = Integer.parseInt(commands[2]);
+				}
+			} else if ("QueryCol".equals(commands[0])) {
+				int sumCol = 0;
+				for (int i = 0; i < 256; i++) {
+					sumCol += board[i][Integer.parseInt(commands[1])];
+				}
+				System.out.println(sumCol);
+			} else if ("QueryRow".equals(commands[0])) {
+				int sumRow = 0;
+				for (int i = 0; i < 256; i++) {
+					sumRow += board[Integer.parseInt(commands[1])][i];
+				}
+				System.out.println(sumRow);
+			}
+		}
 	}
 }

@@ -1,6 +1,8 @@
 /**
  * Unique Elements
  * ----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a sorted list of numbers with duplicates. Print out the sorted list with duplicates removed.
  * 
@@ -26,22 +28,22 @@ public class UniqueElements {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_UniqueElements.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numbers = line.split(",");
-            ArrayList<String> arrString = new ArrayList<String>();
-            for(String s : numbers) {
-            	if (!arrString.contains(s))
-            		arrString.add(s);
-            }
-            StringBuffer buff = new StringBuffer();
-            for (String s : arrString) {
-            	buff.append(s).append(",");
-            }
-            System.out.println(buff.substring(0, buff.length()-1));
-        }
+		File file = new File("files/easy/test_UniqueElements.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numbers = line.split(",");
+			ArrayList<String> arrString = new ArrayList<String>();
+			for (String s : numbers) {
+				if (!arrString.contains(s))
+					arrString.add(s);
+			}
+			StringBuffer buff = new StringBuffer();
+			for (String s : arrString) {
+				buff.append(s).append(",");
+			}
+			System.out.println(buff.substring(0, buff.length() - 1));
+		}
 	}
 }

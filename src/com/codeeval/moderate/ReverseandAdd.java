@@ -1,6 +1,8 @@
 /** Credits: Programming Challenges by Steven S. Skiena and Miguel A. Revilla
  * Reverse and Add
  * ----------------
+ * @author adambose1990
+ * 
  * The problem is as follows: choose a number, reverse its digits and add it to the original. If the sum is not a 
  * palindrome (which means, it is not the same number from left to right and right to left), repeat this procedure.
  * For example:
@@ -34,26 +36,26 @@ public class ReverseandAdd {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_ReverseandAdd.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            int count = 0;
-            do {
-            	count++;
-            	StringBuilder revLine = new StringBuilder(line).reverse();
-            	long sum = Long.parseLong(line) + Long.parseLong(revLine.toString());
-            	line = Long.toString(sum);
-            } while (!isPalindrome(line));
-            System.out.println(count + " " + line);
-        }
+		File file = new File("files/moderate/test_ReverseandAdd.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			int count = 0;
+			do {
+				count++;
+				StringBuilder revLine = new StringBuilder(line).reverse();
+				long sum = Long.parseLong(line) + Long.parseLong(revLine.toString());
+				line = Long.toString(sum);
+			} while (!isPalindrome(line));
+			System.out.println(count + " " + line);
+		}
 	}
-	
-	public static boolean isPalindrome (String line) {
+
+	public static boolean isPalindrome(String line) {
 		boolean flag = true;
 		char[] charArray = line.toCharArray();
-		for (int i = 0; i < charArray.length/2; i++) {
+		for (int i = 0; i < charArray.length / 2; i++) {
 			if (charArray[i] != charArray[charArray.length - i - 1]) {
 				flag = false;
 				break;

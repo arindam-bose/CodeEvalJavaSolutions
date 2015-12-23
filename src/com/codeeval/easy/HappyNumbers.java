@@ -1,6 +1,8 @@
 /**
  * Happy Numbers
  * --------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * A happy number is defined by the following process. Starting with any positive integer, replace the number by the 
  * sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops 
@@ -35,32 +37,32 @@ public class HappyNumbers {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_HappyNumbers.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            int num = Integer.parseInt(line);
-            int sum = 0;
-            int count = 0;
-            while (sum != 1) {
-            	sum = 0;
-            	int temp = num;
-            	while (temp > 0) {
-                	int i = temp%10;
-                	sum += i*i;
-                	temp = temp/10;
-                }
-            	count++;
-            	if (count > 100) {
-            		System.out.println(0);
-            		break;
-            	}
-            	if (sum == 1) {
-            		System.out.println(1);
-            	}
-            	num = sum;
-            }
-        }
+		File file = new File("files/easy/test_HappyNumbers.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			int num = Integer.parseInt(line);
+			int sum = 0;
+			int count = 0;
+			while (sum != 1) {
+				sum = 0;
+				int temp = num;
+				while (temp > 0) {
+					int i = temp % 10;
+					sum += i * i;
+					temp = temp / 10;
+				}
+				count++;
+				if (count > 100) {
+					System.out.println(0);
+					break;
+				}
+				if (sum == 1) {
+					System.out.println(1);
+				}
+				num = sum;
+			}
+		}
 	}
 }

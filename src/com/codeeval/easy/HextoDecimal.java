@@ -1,6 +1,8 @@
 /**
  * Hex to Decimal
  * ---------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You will be given a hexadecimal (base 16) number. Convert it into decimal (base 10).
  * 
@@ -27,12 +29,12 @@ public class HextoDecimal {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_HextoDecimal.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            System.out.println(Integer.parseInt(line, 16));
-        }
+		File file = new File("files/easy/test_HextoDecimal.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			System.out.println(Integer.parseInt(line, 16));
+		}
 	}
 }

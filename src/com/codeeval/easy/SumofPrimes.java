@@ -1,6 +1,8 @@
 /**
  * Sum of Primes
  * --------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program which determines the sum of the first 1000 prime numbers.
  * 
@@ -19,7 +21,7 @@ public class SumofPrimes {
 		int sum = 0;
 		int num = 2;
 		int count = 0;
-		while ( count < 1000) {
+		while (count < 1000) {
 			if (isPrime(num)) {
 				sum += num;
 				count++;
@@ -31,7 +33,7 @@ public class SumofPrimes {
 
 	private static boolean isPrime(int num) {
 		boolean flag = true;
-		for (int i = 2; i <= num/2 ; i++) {
+		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0) {
 				flag = false;
 				break;

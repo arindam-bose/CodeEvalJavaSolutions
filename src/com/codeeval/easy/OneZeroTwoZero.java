@@ -1,6 +1,8 @@
 /** 
  * One Zero Two Zero
  * -------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Our agent uncovered a global criminal money-laundering network that used offshore companies to defraud international 
  * organizations of total $1,000,000,000! The agent changes his location each hour, but he manages to send us the code 
@@ -42,25 +44,25 @@ public class OneZeroTwoZero {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_OneZeroTwoZero.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            int countTotal = 0;
-            String[] numStrings = line.split(" ");
-            int initCount = Integer.parseInt(numStrings[0]);
-            int initRange = Integer.parseInt(numStrings[1]);
-            for (int i=1 ; i <= initRange; i++) {
-            	int countZero = 0;
-            	String binInt = Integer.toString(i, 2);
-            	if (binInt.contains("0"))
-            		countZero = binInt.length() - binInt.replace("0", "").length();
-            	
-            	if (countZero == initCount)
-            		countTotal++;
-            }
-            System.out.println(countTotal);
-        }
+		File file = new File("files/easy/test_OneZeroTwoZero.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			int countTotal = 0;
+			String[] numStrings = line.split(" ");
+			int initCount = Integer.parseInt(numStrings[0]);
+			int initRange = Integer.parseInt(numStrings[1]);
+			for (int i = 1; i <= initRange; i++) {
+				int countZero = 0;
+				String binInt = Integer.toString(i, 2);
+				if (binInt.contains("0"))
+					countZero = binInt.length() - binInt.replace("0", "").length();
+
+				if (countZero == initCount)
+					countTotal++;
+			}
+			System.out.println(countTotal);
+		}
 	}
 }

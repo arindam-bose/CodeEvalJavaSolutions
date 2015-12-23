@@ -1,6 +1,8 @@
 /**
  * Matrix Rotation
  * ----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a 2D N×N matrix. Each element of the matrix is a letter: from ‘a’ to ‘z’. Your task is 
  * to rotate the matrix 90° clockwise:
@@ -38,16 +40,16 @@ public class MatrixRotation {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_MatrixRotation.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] elements = line.split(" ");
-            String[][] eMatrix = getMatrix(elements);
-            String[][] revMatrix = getReverseMatrix(eMatrix);
-            System.out.println(getFinalString(revMatrix));
-        }
+		File file = new File("files/easy/test_MatrixRotation.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] elements = line.split(" ");
+			String[][] eMatrix = getMatrix(elements);
+			String[][] revMatrix = getReverseMatrix(eMatrix);
+			System.out.println(getFinalString(revMatrix));
+		}
 	}
 
 	private static String[][] getMatrix(String[] elements) {
@@ -55,19 +57,19 @@ public class MatrixRotation {
 		String[][] eMatrix = new String[num][num];
 		for (int i = 0; i < num; i++) {
 			for (int j = 0; j < num; j++) {
-				eMatrix[i][j] = elements[num*i + j];
+				eMatrix[i][j] = elements[num * i + j];
 			}
 		}
 		return eMatrix;
 	}
-	
+
 	private static String[][] getReverseMatrix(String[][] eMatrix) {
 		int num = eMatrix.length;
 		String[][] tempMatrix = new String[num][num];
 		for (int i = 0; i < num; i++) {
 			tempMatrix[i] = eMatrix[num - i - 1];
 		}
-		
+
 		String[][] revMatrix = new String[num][num];
 		for (int i = 0; i < num; i++) {
 			for (int j = 0; j < num; j++) {
@@ -76,7 +78,7 @@ public class MatrixRotation {
 		}
 		return revMatrix;
 	}
-	
+
 	private static String getFinalString(String[][] revMatrix) {
 		StringBuffer buffer = new StringBuffer();
 		int num = revMatrix.length;
@@ -85,6 +87,6 @@ public class MatrixRotation {
 				buffer.append(revMatrix[i][j]).append(" ");
 			}
 		}
-		return buffer.substring(0, buffer.length()-1).toString();
+		return buffer.substring(0, buffer.length() - 1).toString();
 	}
 }

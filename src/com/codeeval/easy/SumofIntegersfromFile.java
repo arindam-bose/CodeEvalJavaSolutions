@@ -1,6 +1,8 @@
 /**
  * Sum of Integers from File
  * ---------------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Print out the sum of integers read from a file.
  * 
@@ -25,14 +27,14 @@ public class SumofIntegersfromFile {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SumofIntegersfromFile.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        int sum = 0;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            sum += Integer.parseInt(line);
-        }
-        System.out.println(sum);
+		File file = new File("files/easy/test_SumofIntegersfromFile.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		int sum = 0;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			sum += Integer.parseInt(line);
+		}
+		System.out.println(sum);
 	}
 }

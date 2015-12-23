@@ -1,6 +1,8 @@
 /**
  * Fizz Buzz
  * -----------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Players generally sit in a circle. The first player says the number "1", and each player says next number in turn. 
  * However, any number divisible by X (for example, three) is replaced by the word fizz, and any divisible by Y 
@@ -43,28 +45,28 @@ public class FizzBuzz {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_FizzBuzz.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numStrings = line.split(" ");
-            int firstNum = Integer.parseInt(numStrings[0]);
-            int secondNum = Integer.parseInt(numStrings[1]);
-            int lastNum = Integer.parseInt(numStrings[2]);
-            StringBuffer strBuffer = new StringBuffer();
-            for (int i = 1; i <= lastNum; i++) {
-            	if (i % firstNum == 0 && i % secondNum == 0) 
-            		strBuffer.append("FB").append(" ");
-            	else if (i % firstNum == 0)
-            		strBuffer.append("F").append(" ");
-            	else if (i % secondNum == 0)
-            		strBuffer.append("B").append(" ");
-            	else
-            		strBuffer.append(i).append(" ");
-            }
-            strBuffer.setLength(strBuffer.length()-1);
-        	System.out.println(strBuffer);
-        }
+		File file = new File("files/easy/test_FizzBuzz.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numStrings = line.split(" ");
+			int firstNum = Integer.parseInt(numStrings[0]);
+			int secondNum = Integer.parseInt(numStrings[1]);
+			int lastNum = Integer.parseInt(numStrings[2]);
+			StringBuffer strBuffer = new StringBuffer();
+			for (int i = 1; i <= lastNum; i++) {
+				if (i % firstNum == 0 && i % secondNum == 0)
+					strBuffer.append("FB").append(" ");
+				else if (i % firstNum == 0)
+					strBuffer.append("F").append(" ");
+				else if (i % secondNum == 0)
+					strBuffer.append("B").append(" ");
+				else
+					strBuffer.append(i).append(" ");
+			}
+			strBuffer.setLength(strBuffer.length() - 1);
+			System.out.println(strBuffer);
+		}
 	}
 }

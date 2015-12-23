@@ -1,6 +1,8 @@
 /**
  * Big Digits
  * -----------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * In this challenge you're presented with a situation in which you need to output big symbols on devices which 
  * only support ASCII characters and single, fixed-width fonts. To do this you're going to use pseudo-graphics 
@@ -73,109 +75,109 @@ public class BigDigits {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_BigDigits.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            StringBuffer[] finalString = new StringBuffer[6];
-            for (int i = 0; i < 6 ; i++)
-    			finalString[i] = new StringBuffer(); 
-            for (int i = 0; i < line.length(); i++) {
-            	if ((line.charAt(i) >= 48) && (line.charAt(i) <= 57)) {
-            		String[] incomingString = getLibrary(Integer.parseInt(Character.toString(line.charAt(i))));
-            		for (int j = 0; j < 6 ; j++)
-            			finalString[j].append(incomingString[j]);
-            	}
-            }
-            for (int i = 0; i < finalString.length; i++)
+		File file = new File("files/easy/test_BigDigits.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			StringBuffer[] finalString = new StringBuffer[6];
+			for (int i = 0; i < 6; i++)
+				finalString[i] = new StringBuffer();
+			for (int i = 0; i < line.length(); i++) {
+				if ((line.charAt(i) >= 48) && (line.charAt(i) <= 57)) {
+					String[] incomingString = getLibrary(Integer.parseInt(Character.toString(line.charAt(i))));
+					for (int j = 0; j < 6; j++)
+						finalString[j].append(incomingString[j]);
+				}
+			}
+			for (int i = 0; i < finalString.length; i++)
 				System.out.println(finalString[i]);
-        }
+		}
 	}
-	
-	private static String[] getLibrary (int num) {
+
+	private static String[] getLibrary(int num) {
 		String[] library = new String[6];
-		switch(num) {
-			case 0:
-				library[0] = new String("-**--");
-				library[1] = new String("*--*-");
-				library[2] = new String("*--*-");
-				library[3] = new String("*--*-");
-				library[4] = new String("-**--");
-				library[5] = new String("-----");
-				break;
-			case 1:
-				library[0] = new String("--*--");
-				library[1] = new String("-**--");
-				library[2] = new String("--*--");
-				library[3] = new String("--*--");
-				library[4] = new String("-***-");
-				library[5] = new String("-----");
-				break;
-			case 2:
-				library[0] = new String("***--");
-				library[1] = new String("---*-");
-				library[2] = new String("-**--");
-				library[3] = new String("*----");
-				library[4] = new String("****-");
-				library[5] = new String("-----");
-				break;
-			case 3:
-				library[0] = new String("***--");
-				library[1] = new String("---*-");
-				library[2] = new String("-**--");
-				library[3] = new String("---*-");
-				library[4] = new String("***--");
-				library[5] = new String("-----");
-				break;
-			case 4:
-				library[0] = new String("-*---");
-				library[1] = new String("*--*-");
-				library[2] = new String("****-");
-				library[3] = new String("---*-");
-				library[4] = new String("---*-");
-				library[5] = new String("-----");
-				break;
-			case 5:
-				library[0] = new String("****-");
-				library[1] = new String("*----");
-				library[2] = new String("***--");
-				library[3] = new String("---*-");
-				library[4] = new String("***--");
-				library[5] = new String("-----");
-				break;
-			case 6:
-				library[0] = new String("-**--");
-				library[1] = new String("*----");
-				library[2] = new String("***--");
-				library[3] = new String("*--*-");
-				library[4] = new String("-**--");
-				library[5] = new String("-----");
-				break;
-			case 7:
-				library[0] = new String("****-");
-				library[1] = new String("---*-");
-				library[2] = new String("--*--");
-				library[3] = new String("-*---");
-				library[4] = new String("-*---");
-				library[5] = new String("-----");
-				break;
-			case 8:
-				library[0] = new String("-**--");
-				library[1] = new String("*--*-");
-				library[2] = new String("-**--");
-				library[3] = new String("*--*-");
-				library[4] = new String("-**--");
-				library[5] = new String("-----");
-				break;
-			case 9:
-				library[0] = new String("-**--");
-				library[1] = new String("*--*-");
-				library[2] = new String("-***-");
-				library[3] = new String("---*-");
-				library[4] = new String("-**--");
-				library[5] = new String("-----");
-				break;
+		switch (num) {
+		case 0:
+			library[0] = new String("-**--");
+			library[1] = new String("*--*-");
+			library[2] = new String("*--*-");
+			library[3] = new String("*--*-");
+			library[4] = new String("-**--");
+			library[5] = new String("-----");
+			break;
+		case 1:
+			library[0] = new String("--*--");
+			library[1] = new String("-**--");
+			library[2] = new String("--*--");
+			library[3] = new String("--*--");
+			library[4] = new String("-***-");
+			library[5] = new String("-----");
+			break;
+		case 2:
+			library[0] = new String("***--");
+			library[1] = new String("---*-");
+			library[2] = new String("-**--");
+			library[3] = new String("*----");
+			library[4] = new String("****-");
+			library[5] = new String("-----");
+			break;
+		case 3:
+			library[0] = new String("***--");
+			library[1] = new String("---*-");
+			library[2] = new String("-**--");
+			library[3] = new String("---*-");
+			library[4] = new String("***--");
+			library[5] = new String("-----");
+			break;
+		case 4:
+			library[0] = new String("-*---");
+			library[1] = new String("*--*-");
+			library[2] = new String("****-");
+			library[3] = new String("---*-");
+			library[4] = new String("---*-");
+			library[5] = new String("-----");
+			break;
+		case 5:
+			library[0] = new String("****-");
+			library[1] = new String("*----");
+			library[2] = new String("***--");
+			library[3] = new String("---*-");
+			library[4] = new String("***--");
+			library[5] = new String("-----");
+			break;
+		case 6:
+			library[0] = new String("-**--");
+			library[1] = new String("*----");
+			library[2] = new String("***--");
+			library[3] = new String("*--*-");
+			library[4] = new String("-**--");
+			library[5] = new String("-----");
+			break;
+		case 7:
+			library[0] = new String("****-");
+			library[1] = new String("---*-");
+			library[2] = new String("--*--");
+			library[3] = new String("-*---");
+			library[4] = new String("-*---");
+			library[5] = new String("-----");
+			break;
+		case 8:
+			library[0] = new String("-**--");
+			library[1] = new String("*--*-");
+			library[2] = new String("-**--");
+			library[3] = new String("*--*-");
+			library[4] = new String("-**--");
+			library[5] = new String("-----");
+			break;
+		case 9:
+			library[0] = new String("-**--");
+			library[1] = new String("*--*-");
+			library[2] = new String("-***-");
+			library[3] = new String("---*-");
+			library[4] = new String("-**--");
+			library[5] = new String("-----");
+			break;
 		}
 		return library;
 	}

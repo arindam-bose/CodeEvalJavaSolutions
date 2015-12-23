@@ -1,6 +1,8 @@
 /**
  * Find a Writer
  * --------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You have a set of rows with names of famous writers encoded inside. Each row is divided into 2 parts by pipe char (|). 
  * The first part has a writer's name. The second part is a "key" to generate a name.
@@ -29,18 +31,18 @@ public class FindaWriter {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_FindaWriter.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] parts = line.split("\\|");
-            String[] codes = parts[1].trim().split(" ");
-            StringBuffer strBuffer = new StringBuffer();
-            for (int i = 0; i < codes.length; i++) {
-            	strBuffer.append(parts[0].charAt(Integer.parseInt(codes[i]) - 1));
-            }
-            System.out.println(strBuffer);
-        }
+		File file = new File("files/easy/test_FindaWriter.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] parts = line.split("\\|");
+			String[] codes = parts[1].trim().split(" ");
+			StringBuffer strBuffer = new StringBuffer();
+			for (int i = 0; i < codes.length; i++) {
+				strBuffer.append(parts[0].charAt(Integer.parseInt(codes[i]) - 1));
+			}
+			System.out.println(strBuffer);
+		}
 	}
 }

@@ -1,6 +1,8 @@
 /**
  * Read More
  * -----------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a text. Write a program which outputs its lines according to the following rules:
  * If line length is <= 55 characters, print it without any changes.
@@ -42,24 +44,24 @@ public class ReadMore {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_ReadMore.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            StringBuilder newString = new StringBuilder();
-            if (line.length() > 55) {
-            	String resultString = line.substring(0, 40).trim();
-            	if (resultString.contains(" ")){ 
-            		int lastSpace = resultString.lastIndexOf(' ');
-            		newString.append(line.substring(0, lastSpace).trim());
-            	} else {
-            		newString.append(resultString);
-            	}
-            	newString.append("... <Read More>");
-            	line = newString.toString();
-            }
-            System.out.println(line);
-        }
+		File file = new File("files/easy/test_ReadMore.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			StringBuilder newString = new StringBuilder();
+			if (line.length() > 55) {
+				String resultString = line.substring(0, 40).trim();
+				if (resultString.contains(" ")) {
+					int lastSpace = resultString.lastIndexOf(' ');
+					newString.append(line.substring(0, lastSpace).trim());
+				} else {
+					newString.append(resultString);
+				}
+				newString.append("... <Read More>");
+				line = newString.toString();
+			}
+			System.out.println(line);
+		}
 	}
 }

@@ -1,6 +1,8 @@
 /** 
  * Swap Numbers
  * -------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program that, given a sentence where each word has a single digit positive integer as a prefix and suffix, swaps the numbers while retaining the word in between. Words in the sentence are delimited from each other by a space.
  * 
@@ -30,26 +32,26 @@ public class SwapNumbers {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SwapNumbers.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            StringBuilder changed= new StringBuilder() ;
-        	String[] words = line.split(" ");
-        	for (int i = 0; i < words.length; i++) {
+		File file = new File("files/easy/test_SwapNumbers.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			StringBuilder changed = new StringBuilder();
+			String[] words = line.split(" ");
+			for (int i = 0; i < words.length; i++) {
 				String word = words[i];
-				if (word.charAt(0) != word.charAt(word.length()-1)) {
+				if (word.charAt(0) != word.charAt(word.length() - 1)) {
 					char[] charArray = word.toCharArray();
 					char temp = charArray[0];
-					charArray[0] = charArray[charArray.length-1];
-					charArray[charArray.length-1] = temp;
+					charArray[0] = charArray[charArray.length - 1];
+					charArray[charArray.length - 1] = temp;
 					words[i] = new String(charArray);
 				}
 				changed.append(words[i]).append(" ");
 			}
-        	changed.setLength(changed.length()-1);
-        	System.out.println(changed);
-        }
+			changed.setLength(changed.length() - 1);
+			System.out.println(changed);
+		}
 	}
 }

@@ -1,6 +1,8 @@
 /**
  * Rightmost Char
  * ----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a string 'S' and a character 't'. Print out the position of the rightmost occurrence of 't' 
  * (case matters) in 'S' or -1 if there is none. The position to be printed out is zero based.
@@ -29,14 +31,14 @@ public class RightmostChar {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_RightmostChar.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
+		File file = new File("files/easy/test_RightmostChar.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
 
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] words = line.split(",");
-            System.out.println(words[0].lastIndexOf(words[1].trim()));
-        }
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] words = line.split(",");
+			System.out.println(words[0].lastIndexOf(words[1].trim()));
+		}
 	}
 }

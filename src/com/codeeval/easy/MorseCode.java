@@ -1,6 +1,8 @@
 /**
  * Morse Code
  * ------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You have received a text encoded with Morse code and want to decode it.
  * 
@@ -29,22 +31,23 @@ public class MorseCode {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_MorseCode.txt");
+		File file = new File("files/easy/test_MorseCode.txt");
 		BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] codes = line.split(" ");
-            StringBuffer buff = new StringBuffer();
-            for (String s : codes) {
-            	if (s.equals(""))
-            		buff.append(" ");
-            	else
-            		buff.append(getWordFromLibrary(s));
-            }
-            System.out.println(buff);
-        }
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] codes = line.split(" ");
+			StringBuffer buff = new StringBuffer();
+			for (String s : codes) {
+				if (s.equals(""))
+					buff.append(" ");
+				else
+					buff.append(getWordFromLibrary(s));
+			}
+			System.out.println(buff);
+		}
 	}
+
 	private static String getWordFromLibrary(String key) {
 		Map<String, String> library = new HashMap<String, String>();
 		library.put(".-", "A");
@@ -73,7 +76,7 @@ public class MorseCode {
 		library.put("-..-", "X");
 		library.put("-.--", "Y");
 		library.put("--..", "Z");
-		
+
 		library.put(".----", "1");
 		library.put("..---", "2");
 		library.put("...--", "3");
@@ -84,7 +87,7 @@ public class MorseCode {
 		library.put("---..", "8");
 		library.put("----.", "9");
 		library.put("-----", "0");
-		
+
 		return library.get(key);
 	}
 }

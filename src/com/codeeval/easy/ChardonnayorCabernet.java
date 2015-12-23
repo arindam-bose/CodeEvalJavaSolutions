@@ -1,6 +1,8 @@
 /**
  * Chardonnay Or Cabernet
  * -----------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Your good friend Tom is admirer of tasting different types of fine wines. What he loves even more is to guess 
  * their names. One day, he was sipping very extraordinary wine. Tom was sure he had tasted it before, but what 
@@ -46,35 +48,35 @@ public class ChardonnayorCabernet {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_ChardonnayOrCabernet.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numStrings = line.split("\\|");
-            String[] words = numStrings[0].trim().split(" ");
-            String reg = numStrings[1].trim();
-            StringBuffer strBuffer = new StringBuffer();
-            int outFlag = 0;
-            for (int i = 0 ; i < words.length; i++) {
-            	boolean inFlag = true;
-            	String tempWord = new String(words[i]);
-            	for (int j = 0; j < reg.length(); j++) {
-            		if (!tempWord.contains(Character.toString(reg.charAt(j)))) {
-            			inFlag = false;
-            			break;
-            		} else {
-            			tempWord = new String(tempWord.replaceFirst(Character.toString(reg.charAt(j)), ""));
-            		}
-            	}
-            	if (inFlag == true) {
-            		strBuffer.append(words[i] + " ");
-            		outFlag++;
-            	}
-            }
-            if (outFlag == 0)
-            	strBuffer.append("False ");
-            System.out.println(strBuffer.substring(0, strBuffer.length()-1));
-        }
+		File file = new File("files/easy/test_ChardonnayOrCabernet.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numStrings = line.split("\\|");
+			String[] words = numStrings[0].trim().split(" ");
+			String reg = numStrings[1].trim();
+			StringBuffer strBuffer = new StringBuffer();
+			int outFlag = 0;
+			for (int i = 0; i < words.length; i++) {
+				boolean inFlag = true;
+				String tempWord = new String(words[i]);
+				for (int j = 0; j < reg.length(); j++) {
+					if (!tempWord.contains(Character.toString(reg.charAt(j)))) {
+						inFlag = false;
+						break;
+					} else {
+						tempWord = new String(tempWord.replaceFirst(Character.toString(reg.charAt(j)), ""));
+					}
+				}
+				if (inFlag == true) {
+					strBuffer.append(words[i] + " ");
+					outFlag++;
+				}
+			}
+			if (outFlag == 0)
+				strBuffer.append("False ");
+			System.out.println(strBuffer.substring(0, strBuffer.length() - 1));
+		}
 	}
 }

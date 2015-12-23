@@ -1,6 +1,8 @@
 /**
  * Simple Sorting
  * ---------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program which sorts numbers.
  * 
@@ -28,21 +30,21 @@ public class SimpleSorting {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SimpleSorting.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        DecimalFormat df = new DecimalFormat("0.000");
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numbers = line.split(" ");
-            Double[] dNumbers = new Double[numbers.length];
-            for (int i = 0; i < numbers.length; i++)
-            	dNumbers[i] = Double.parseDouble(numbers[i]);
-            Arrays.sort(dNumbers);
-            StringBuffer buff = new StringBuffer();
-            for (int i = 0; i < dNumbers.length; i++)
-            	buff.append(df.format(dNumbers[i])).append(" ");
-            System.out.println(buff.substring(0, buff.length()-1));
-        }
+		File file = new File("files/easy/test_SimpleSorting.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		DecimalFormat df = new DecimalFormat("0.000");
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numbers = line.split(" ");
+			Double[] dNumbers = new Double[numbers.length];
+			for (int i = 0; i < numbers.length; i++)
+				dNumbers[i] = Double.parseDouble(numbers[i]);
+			Arrays.sort(dNumbers);
+			StringBuffer buff = new StringBuffer();
+			for (int i = 0; i < dNumbers.length; i++)
+				buff.append(df.format(dNumbers[i])).append(" ");
+			System.out.println(buff.substring(0, buff.length() - 1));
+		}
 	}
 }

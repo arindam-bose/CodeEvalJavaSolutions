@@ -1,6 +1,8 @@
 /**
  * Prime Palindrome
  * ------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program which determines the largest prime palindrome less than 1000.
  *
@@ -31,8 +33,8 @@ public class PrimePalindrome {
 
 	private static boolean isPrime(int num) {
 		boolean prime = true;
-		for (int i = 2; i <= num/2; i++) {
-			if (num%i == 0) {
+		for (int i = 2; i <= num / 2; i++) {
+			if (num % i == 0) {
 				prime = false;
 				break;
 			}
@@ -43,7 +45,7 @@ public class PrimePalindrome {
 	private static boolean isPalindrome(int num) {
 		String strNum = Integer.toString(num);
 		boolean palin = true;
-		for (int i = 0; i < strNum.length()/2; i++) {
+		for (int i = 0; i < strNum.length() / 2; i++) {
 			if (strNum.charAt(i) != strNum.charAt(strNum.length() - 1 - i)) {
 				palin = false;
 				break;

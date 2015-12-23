@@ -1,6 +1,8 @@
 /**
  * Capitalize Words
  * ------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program which capitalizes the first letter of each word in a sentence.
  * 
@@ -29,28 +31,28 @@ public class CapitalizeWords {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_CapitalizeWords.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            System.out.println(toTitleCase(line));
-        }
+		File file = new File("files/easy/test_CapitalizeWords.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			System.out.println(toTitleCase(line));
+		}
 	}
-	
-	public static String toTitleCase(String input) {
-	    StringBuffer titleCase = new StringBuffer();
-	    boolean nextTitleCase = true;
 
-	    for (char c : input.toCharArray()) {
-	        if (Character.isSpaceChar(c)) {
-	            nextTitleCase = true;
-	        } else if (nextTitleCase) {
-	            c = Character.toTitleCase(c);
-	            nextTitleCase = false;
-	        }
-	        titleCase.append(c);
-	    }
-	    return titleCase.toString();
+	public static String toTitleCase(String input) {
+		StringBuffer titleCase = new StringBuffer();
+		boolean nextTitleCase = true;
+
+		for (char c : input.toCharArray()) {
+			if (Character.isSpaceChar(c)) {
+				nextTitleCase = true;
+			} else if (nextTitleCase) {
+				c = Character.toTitleCase(c);
+				nextTitleCase = false;
+			}
+			titleCase.append(c);
+		}
+		return titleCase.toString();
 	}
 }

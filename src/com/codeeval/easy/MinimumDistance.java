@@ -1,6 +1,8 @@
 /**
  * Minimum Distance
  * ------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Alice is looking for a sorority to join for her first year at Acme University. There is a street consisting 
  * entirely of sorority houses near the university, and some of her high school friends have already joined 
@@ -40,32 +42,32 @@ import java.util.Arrays;
 public class MinimumDistance {
 
 	@SuppressWarnings("resource")
-	public static void main(String[] args) throws IOException  {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_MinimumDistance.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] strNums = line.split(" ");
-            int[] intNums = new int[strNums.length - 1];
-            for (int i = 0; i < strNums.length - 1; i++) {
-            	intNums[i] = Integer.parseInt(strNums[i+1]);
-            }
-            Arrays.sort(intNums);
-            int[] sums = new int[intNums[intNums.length-1] - intNums[0] + 1];
-            int k = 0;
-            for (int i = intNums[0]; i <= intNums[intNums.length-1]; i++) {
-            	for (int j = 0; j < intNums.length; j++) {
-                	sums[k] += Math.abs(i - intNums[j]);
-                }
-            	k++;
-            }
-            int min = sums[0];
-            for (int i = 0; i < sums.length; i++) {
-            	if (min >= sums[i])
-            		min = sums[i];
-            }
-            System.out.println(min);
-        }
+	public static void main(String[] args) throws IOException {
+		File file = new File("files/easy/test_MinimumDistance.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] strNums = line.split(" ");
+			int[] intNums = new int[strNums.length - 1];
+			for (int i = 0; i < strNums.length - 1; i++) {
+				intNums[i] = Integer.parseInt(strNums[i + 1]);
+			}
+			Arrays.sort(intNums);
+			int[] sums = new int[intNums[intNums.length - 1] - intNums[0] + 1];
+			int k = 0;
+			for (int i = intNums[0]; i <= intNums[intNums.length - 1]; i++) {
+				for (int j = 0; j < intNums.length; j++) {
+					sums[k] += Math.abs(i - intNums[j]);
+				}
+				k++;
+			}
+			int min = sums[0];
+			for (int i = 0; i < sums.length; i++) {
+				if (min >= sums[i])
+					min = sums[i];
+			}
+			System.out.println(min);
+		}
 	}
 }

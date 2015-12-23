@@ -1,6 +1,8 @@
 /**
  * N Mod M
  * ---------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Given two integers N and M, calculate N Mod M (without using any inbuilt modulus operator).
  * 
@@ -25,14 +27,14 @@ public class NModM {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_NModM.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] nums = line.split(",");
-            int num = Integer.parseInt(nums[0])% Integer.parseInt(nums[1]);
-            System.out.println(num);
-        }
+		File file = new File("files/easy/test_NModM.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] nums = line.split(",");
+			int num = Integer.parseInt(nums[0]) % Integer.parseInt(nums[1]);
+			System.out.println(num);
+		}
 	}
 }

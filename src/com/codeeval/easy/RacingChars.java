@@ -1,6 +1,8 @@
 /**
  * Racing Chars
  * --------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * You are given a file where each line is a section of a race track with obstructions, gates, and checkpoints. 
  * Your task is to find a way to pass this track using the following information:
@@ -53,30 +55,30 @@ public class RacingChars {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_RacingChars.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        int prevPos = -1;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            int currPos;
-            String currPoint = "";
-            if (line.contains("C") && line.contains("_")) {
-            	currPoint = "C";
-            } else if (!line.contains("C") && line.contains("_")) {
-            	currPoint = "_";
-            }
-            
-            currPos = line.indexOf(currPoint);
-        	if (prevPos == currPos || prevPos == -1) {
-        		line = new String(line.replace(currPoint, "|"));
-        	} else if (prevPos < currPos) {
-        		line = new String(line.replace(currPoint, "\\"));
-        	} else if (prevPos > currPos) {
-        		line = new String(line.replace(currPoint, "/"));
-        	}
-        	prevPos = currPos;
-        	System.out.println(line);
-        }
+		File file = new File("files/easy/test_RacingChars.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		int prevPos = -1;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			int currPos;
+			String currPoint = "";
+			if (line.contains("C") && line.contains("_")) {
+				currPoint = "C";
+			} else if (!line.contains("C") && line.contains("_")) {
+				currPoint = "_";
+			}
+
+			currPos = line.indexOf(currPoint);
+			if (prevPos == currPos || prevPos == -1) {
+				line = new String(line.replace(currPoint, "|"));
+			} else if (prevPos < currPos) {
+				line = new String(line.replace(currPoint, "\\"));
+			} else if (prevPos > currPos) {
+				line = new String(line.replace(currPoint, "/"));
+			}
+			prevPos = currPos;
+			System.out.println(line);
+		}
 	}
 }

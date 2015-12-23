@@ -1,6 +1,8 @@
 /**
  * File Size
  * -----------
+ * @author adambose1990
+ * 
  * Print the size of a file in bytes.
  * 
  * INPUT:
@@ -18,7 +20,7 @@ import java.io.IOException;
 public class FileSize {
 
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SwapCase.txt");
-        System.out.println(file.length());
+		File file = new File("files/easy/test_SwapCase.txt");
+		System.out.println(file.length());
 	}
 }

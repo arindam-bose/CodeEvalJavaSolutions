@@ -1,6 +1,8 @@
 /**
  * Multiples of a Number
  * -----------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Given numbers x and n, where n is a power of 2, print out the smallest multiple of n which is greater than or 
  * equal to x. Do not use division or modulo operator.
@@ -27,17 +29,17 @@ public class MultiplesofaNumber {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_MultiplesofaNumber.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numbers = line.split(",");
-            int i = 1;
-            while(i*Integer.parseInt(numbers[1]) < Integer.parseInt(numbers[0])) {
-            	i++;
-            }
-            System.out.println(i*Integer.parseInt(numbers[1]));
-        }
+		File file = new File("files/easy/test_MultiplesofaNumber.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numbers = line.split(",");
+			int i = 1;
+			while (i * Integer.parseInt(numbers[1]) < Integer.parseInt(numbers[0])) {
+				i++;
+			}
+			System.out.println(i * Integer.parseInt(numbers[1]));
+		}
 	}
 }

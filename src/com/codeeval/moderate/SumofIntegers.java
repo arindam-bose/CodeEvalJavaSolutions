@@ -1,6 +1,8 @@
 /**
  * Sum of Integers
  * ----------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program to determine the largest sum of contiguous integers in a list.
  * 
@@ -29,24 +31,24 @@ public class SumofIntegers {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_SumofIntegers.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            String[] numbers = line.split(",");
-            int[] sums = new int[(numbers.length + 1) * numbers.length / 2];
-            int l = 0;
-            for (int i = 0; i < numbers.length; i++) {
-            	for (int j = 0; j < numbers.length-i; j++) {
-            		int sum = 0;
-            		for (int k = i; k <= j+i; k++)
-            			sum += Integer.parseInt(numbers[k]);
-            		sums[l++] = sum;
-            	}
-            }
-            Arrays.sort(sums);
-            System.out.println(sums[sums.length-1]);
-        }
+		File file = new File("files/moderate/test_SumofIntegers.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			String[] numbers = line.split(",");
+			int[] sums = new int[(numbers.length + 1) * numbers.length / 2];
+			int l = 0;
+			for (int i = 0; i < numbers.length; i++) {
+				for (int j = 0; j < numbers.length - i; j++) {
+					int sum = 0;
+					for (int k = i; k <= j + i; k++)
+						sum += Integer.parseInt(numbers[k]);
+					sums[l++] = sum;
+				}
+			}
+			Arrays.sort(sums);
+			System.out.println(sums[sums.length - 1]);
+		}
 	}
 }

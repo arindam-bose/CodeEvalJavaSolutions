@@ -1,6 +1,8 @@
 /** Credits: Programming Challenges by Houghton Mifflin Harcourt
  * String Permutations
  * ---------------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Write a program which prints all the permutations of a string in alphabetical order. We consider that digits 
  * < upper case letters < lower case letters. The sorting should be performed in ascending order.
@@ -32,43 +34,43 @@ public class StringPermutations {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:/Users/Arindam/workspaceCodeEval/CodeEvalJavaSolutions/files/test_StringPermutations.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            ArrayList<String> res = permutation(line);
-            StringBuffer strBuffer = new StringBuffer();
-            for (int i = 0; i < res.size(); i++) {
-            	strBuffer.append(res.get(i)).append(',');
-            }
-            strBuffer.setLength(strBuffer.length()-1);
-        	System.out.println(strBuffer);
-        }
+		File file = new File("files/hard/test_StringPermutations.txt");
+		BufferedReader buffer = new BufferedReader(new FileReader(file));
+		String line;
+		while ((line = buffer.readLine()) != null) {
+			line = line.trim();
+			ArrayList<String> res = permutation(line);
+			StringBuffer strBuffer = new StringBuffer();
+			for (int i = 0; i < res.size(); i++) {
+				strBuffer.append(res.get(i)).append(',');
+			}
+			strBuffer.setLength(strBuffer.length() - 1);
+			System.out.println(strBuffer);
+		}
 	}
-	
+
 	public static ArrayList<String> permutation(String s) {
-	    ArrayList<String> res = new ArrayList<String>();
-	    if (s.length() == 1) {
-	        res.add(s);
-	    } else if (s.length() > 1) {
-	        int lastIndex = s.length() - 1;
-	        String last = s.substring(lastIndex);
-	        String rest = s.substring(0, lastIndex);
-	        res = merge(permutation(rest), last);
-	    }
-	    Collections.sort(res);
-	    return res;
+		ArrayList<String> res = new ArrayList<String>();
+		if (s.length() == 1) {
+			res.add(s);
+		} else if (s.length() > 1) {
+			int lastIndex = s.length() - 1;
+			String last = s.substring(lastIndex);
+			String rest = s.substring(0, lastIndex);
+			res = merge(permutation(rest), last);
+		}
+		Collections.sort(res);
+		return res;
 	}
 
 	public static ArrayList<String> merge(ArrayList<String> list, String c) {
-	    ArrayList<String> res = new ArrayList<String>();
-	    for (String s : list) {
-	        for (int i = 0; i <= s.length(); ++i) {
-	            String ps = new StringBuffer(s).insert(i, c).toString();
-	            res.add(ps);
-	        }
-	    }
-	    return res;
+		ArrayList<String> res = new ArrayList<String>();
+		for (String s : list) {
+			for (int i = 0; i <= s.length(); ++i) {
+				String ps = new StringBuffer(s).insert(i, c).toString();
+				res.add(ps);
+			}
+		}
+		return res;
 	}
 }

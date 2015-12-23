@@ -1,6 +1,8 @@
 /**
  * Odd Numbers
  * -------------
+ * @author adambose1990
+ * 
  * CHALLENGE DESCRIPTION:
  * Print the odd numbers from 1 to 99.
  * 
