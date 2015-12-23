@@ -59,3 +59,7 @@ Solution List
 #### Hard Problems
 
 1. [String Permutations](https://github.com/adambose1990/CodeEvalJavaSolutions/blob/master/src/com/codeeval/hard/StringPermutations.java)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/adambose1990/codeevaljavasolutions/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
