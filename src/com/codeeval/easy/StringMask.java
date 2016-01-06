@@ -37,6 +37,7 @@ import java.io.IOException;
 
 public class StringMask {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("files/easy/test_StringMask.txt");
 		BufferedReader buffer = new BufferedReader(new FileReader(file));
@@ -46,14 +47,14 @@ public class StringMask {
 			String[] words = line.split(" ");
 			StringBuffer buff = new StringBuffer();
 			for (int i = 0; i < words[1].length(); i++) {
-				if (words[1].charAt(i) == '1'){
+				if (words[1].charAt(i) == '1') {
 					char c = 0;
 					if (Character.isLowerCase(words[0].charAt(i)))
 						c = Character.toUpperCase(words[0].charAt(i));
 					else if (Character.isUpperCase(words[0].charAt(i)))
 						c = Character.toLowerCase(words[0].charAt(i));
 					buff.append(c);
-				} else 
+				} else
 					buff.append(words[0].charAt(i));
 			}
 			System.out.println(buff);

@@ -53,22 +53,22 @@ public class KnightMoves {
 			char c = line.charAt(0);
 			char n = line.charAt(1);
 			if ((c > 'b') && (n > '1'))
-				buff.append((char)(c-2)).append((char)(n-1)).append(" ");
+				buff.append((char) (c - 2)).append((char) (n - 1)).append(" ");
 			if ((c > 'b') && (n < '8'))
-				buff.append((char)(c-2)).append((char)(n+1)).append(" ");
+				buff.append((char) (c - 2)).append((char) (n + 1)).append(" ");
 			if ((c > 'a') && (n > '2'))
-				buff.append((char)(c-1)).append((char)(n-2)).append(" ");
+				buff.append((char) (c - 1)).append((char) (n - 2)).append(" ");
 			if ((c > 'a') && (n < '7'))
-				buff.append((char)(c-1)).append((char)(n+2)).append(" ");
+				buff.append((char) (c - 1)).append((char) (n + 2)).append(" ");
 			if ((c < 'h') && (n > '2'))
-				buff.append((char)(c+1)).append((char)(n-2)).append(" ");
+				buff.append((char) (c + 1)).append((char) (n - 2)).append(" ");
 			if ((c < 'h') && (n < '7'))
-				buff.append((char)(c+1)).append((char)(n+2)).append(" ");
+				buff.append((char) (c + 1)).append((char) (n + 2)).append(" ");
 			if ((c < 'g') && (n > '1'))
-				buff.append((char)(c+2)).append((char)(n-1)).append(" ");
+				buff.append((char) (c + 2)).append((char) (n - 1)).append(" ");
 			if ((c < 'g') && (n < '8'))
-				buff.append((char)(c+2)).append((char)(n+1)).append(" ");
-			System.out.println(buff.substring(0, buff.length()-1));
+				buff.append((char) (c + 2)).append((char) (n + 1)).append(" ");
+			System.out.println(buff.substring(0, buff.length() - 1));
 		}
 	}
 }

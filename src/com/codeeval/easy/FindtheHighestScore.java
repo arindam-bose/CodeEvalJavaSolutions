@@ -69,7 +69,7 @@ public class FindtheHighestScore {
 			for (int i = 0; i < scores.length; i++) {
 				ArrayList<Integer> groupScore = new ArrayList<Integer>();
 				String[] nums = scores[i].trim().split(" ");
-				for ( j = 0; j < nums.length; j++) {
+				for (j = 0; j < nums.length; j++) {
 					groupScore.add(Integer.parseInt(nums[j]));
 				}
 				arrScores.add(groupScore);
@@ -83,7 +83,7 @@ public class FindtheHighestScore {
 				}
 				buff.append(max).append(" ");
 			}
-			System.out.println(buff.substring(0, buff.length()-1));
+			System.out.println(buff.substring(0, buff.length() - 1));
 		}
 	}
 }

@@ -52,11 +52,11 @@ public class CleanuptheWords {
 			}
 			String[] words = buff.toString().split(" ");
 			buff = new StringBuffer();
-			for (String s: words) {
+			for (String s : words) {
 				if (!"".equals(s))
 					buff.append(s).append(" ");
 			}
-			System.out.println(buff.substring(0, buff.length()-1));
+			System.out.println(buff.substring(0, buff.length() - 1));
 		}
 	}
 }

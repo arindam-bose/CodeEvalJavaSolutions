@@ -21,7 +21,7 @@
  * 135 0 54
  * 40
  * 13 16 225 14 120 10
- */	
+ */
 package com.codeeval.easy;
 
 import java.io.BufferedReader;
@@ -44,7 +44,7 @@ public class MultiplyLists {
 			StringBuffer buff = new StringBuffer();
 			for (int i = 0; i < listFirst.length; i++)
 				buff.append(Integer.parseInt(listFirst[i]) * Integer.parseInt(listSecond[i])).append(" ");
-			System.out.println(buff.substring(0, buff.length()-1));
+			System.out.println(buff.substring(0, buff.length() - 1));
 		}
 	}
 }

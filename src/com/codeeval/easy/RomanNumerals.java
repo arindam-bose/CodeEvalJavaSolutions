@@ -38,6 +38,7 @@ import java.util.Map;
 public class RomanNumerals {
 
 	static LinkedHashMap<String, Integer> romanNumerals = new LinkedHashMap<String, Integer>();
+
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		File file = new File("files/easy/test_RomanNumerals.txt");
@@ -51,19 +52,19 @@ public class RomanNumerals {
 	}
 
 	private static String toRomanNumerals(int num) {
-		romanNumerals.put("M",  1000);
+		romanNumerals.put("M", 1000);
 		romanNumerals.put("CM", 900);
-		romanNumerals.put("D",  500);
+		romanNumerals.put("D", 500);
 		romanNumerals.put("CD", 400);
-		romanNumerals.put("C",  100);
+		romanNumerals.put("C", 100);
 		romanNumerals.put("XC", 90);
-		romanNumerals.put("L",  50);
+		romanNumerals.put("L", 50);
 		romanNumerals.put("XL", 40);
-		romanNumerals.put("X",  10);
+		romanNumerals.put("X", 10);
 		romanNumerals.put("IX", 9);
-		romanNumerals.put("V",  5);
+		romanNumerals.put("V", 5);
 		romanNumerals.put("IV", 4);
-		romanNumerals.put("I",  1);
+		romanNumerals.put("I", 1);
 		String res = "";
 		for (Map.Entry<String, Integer> entry : romanNumerals.entrySet()) {
 			int matches = num / entry.getValue();

@@ -51,7 +51,7 @@ public class BlackCard {
 			String[] parts = line.split("\\|");
 			String[] persons = parts[0].trim().split(" ");
 			ArrayList<String> listPersons = new ArrayList<String>();
-			for(String s: persons)
+			for (String s : persons)
 				listPersons.add(s);
 			int num = Integer.parseInt(parts[1].trim());
 			while (listPersons.size() > 1) {

@@ -1,0 +1,20 @@
+be programming Konrad developed was 1943 to computer Z3 Zuse for the and for early German high-level Plankalkul, 1945 by between designed a language An;7 4 20 14 12 23 6 11 18 21 9 16 24 15 2 17 3 13 25 19 22 8 10 5
+Mark 1954 for developed was The and Brooker was Autocode" in second the "Mark by the autocode 1 called 1;8 13 6 5 15 1 14 11 4 20 12 2 7 18 10 17 3 9 16
+source-language for diagnostics noted its EDSAC development as Autocode a for local Mercury was and Autocode, from the was it object and straight code were Known time advanced circumstances, adapted for which optimisation 2;27 32 28 20 22 3 10 2 13 8 21 16 12 7 18 5 11 33 19 6 23 26 9 24 30 1 34 31 17 14 15 29 25
+that customers her wrote notation, Hopper English prototype 1955, an a for implemented and she a uncomfortable found and language early with specification business mathematical programming and team data were processing in;3 7 19 21 12 1 26 32 16 25 22 24 30 29 17 31 9 2 18 28 15 10 23 4 11 27 13 20 5 8 6
+between Z3 and the computer developed high-level a early An by Konrad language designed 1943 for Zuse be to 1945 programming Plankalkul, was for German;22 18 24 16 11 14 3 10 2 1 19 20 5 8 23 15 21 7 6 25 4 13 12 9
+for for code object diagnostics as circumstances, development straight 2 and adapted Autocode time Known a local from Autocode, noted source-language for Mercury was optimisation and its was it which advanced the were EDSAC;21 15 24 23 28 2 17 10 9 4 18 14 13 34 1 8 16 11 5 20 27 32 12 7 25 26 22 19 6 29 31 33 30
+local time advanced and which Autocode, development 2 Mercury it for circumstances, straight as was adapted source-language for code optimisation a its Known Autocode noted and the EDSAC for object were was from diagnostics;16 34 31 26 29 5 10 4 12 6 21 17 9 2 19 14 27 32 24 25 8 22 1 13 20 18 33 3 15 23 30 7 11
+It until was I the 1959 for UNIVAC at 1955 period Rand during developed the Remington from;1 16 2 7 12 17 4 6 8 15 13 10 11 3 5 9
+Short in high-level an proposed Code, first the was one ever John languages electronic developed for Mauchly's 1949, computer of;3 6 13 18 5 4 12 11 8 9 15 1 14 19 16 17 2 7 20
+development, University of thread but A contemporary was 1 Atlas developed machine the Manchester Atlas Autocode separate for of;7 14 15 5 3 1 2 10 18 17 11 19 13 16 8 9 4 12
+early 1959 compiler and in substantially The in was FLOW-MATIC became publicly 1958 available complete;8 15 3 10 14 12 1 7 11 2 4 5 9 6
+Alick developed the Autocode University Manchester, of Glennie At in early the 1950s;6 8 11 9 3 5 4 7 1 10 12 2
+1955 UNIVAC 1959 Rand from Remington at the during for period I until was developed It the;15 6 17 10 14 9 8 12 11 4 13 7 16 2 3 1
+IBM was mid the The Fortran widely used at the purpose and programming became developed language '50s, general language first high-level in;7 4 10 9 1 3 16 17 6 14 20 12 21 13 5 2 11 19 22 15 18
+developed thread contemporary Atlas for Manchester A Atlas University of was the separate development, of but 1 machine Autocode;11 5 2 17 12 16 1 8 14 15 10 13 4 7 6 3 18 19
+Manchester with 1950s developed Mercury the conjunction Brooker Ferranti the University also of an for autocode in the in;19 15 12 3 9 11 14 1 8 16 17 2 18 4 6 5 10 7
+general in the widely IBM was high-level first purpose The used the at developed and language '50s, language programming Fortran became mid;19 8 9 16 7 4 18 15 20 1 17 14 6 5 12 22 11 2 21 3 13
+the programming mid high-level developed in widely general at language the used first IBM purpose '50s, and Fortran The became language was;14 21 10 18 5 8 16 19 6 2 9 17 15 7 20 11 12 3 1 13 22
+and not However, 1998 until implemented 2000 it was;8 4 1 7 6 5 9 2
+2 Mathematical Laboratory by devised University the for Cambridge version was The of Hartley of in 1961 EDSAC;6 15 16 9 8 12 4 3 14 2 7 1 13 10 11 17 18
