@@ -1,6 +1,14 @@
 # CodeEvalJavaSolutions
 CodeEval Solutions Java
 
++============+===============+============+
+
+[| Easy Problems |](https://github.com/adambose1990/CodeEvalJavaSolutions#easy-problems)
+[ Moderate Problems |](https://github.com/adambose1990/CodeEvalJavaSolutions#moderate-problems)
+[ Hard Problems |](https://github.com/adambose1990/CodeEvalJavaSolutions#hard-problems)
+
++============+===============+============+
+
 Solution List
 -------------
 #### Easy Problems
